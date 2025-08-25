@@ -4,15 +4,17 @@ This collection of must-use plugins fixes common HTTP API connection issues that
 
 ## Security First
 
-**IMPORTANT**: These plugins only apply their fixes when running on localhost domains for security. They will automatically detect the environment and **only work on development domains**.
+~~**IMPORTANT**: These plugins only apply their fixes when running on localhost domains for security. They will automatically detect the environment and **only work on development domains**.~~
 
-### Supported Development Domains:
-- `localhost` (e.g., `localhost:8081`)
-- `127.0.0.1`
-- `0.0.0.0`
-- `*.local`
-- `*.test`
-- `*.dev`
+The activation issue seems to be a problem on WPengine as well, thus this has been modified, see commit https://github.com/fuzzywalrus/kadence-activation-local-fix/tree/960cd857e41ef5c97b7418bb8246e7d16722f61c for the previous version used for local only.
+
+~~*### Supported Development Domains:~~*
+~~*- `localhost` (e.g., `localhost:8081`)~~*
+~~*- `127.0.0.1`~~*
+~~*- `0.0.0.0`~~*
+~~*- `*.local`~~*
+~~*- `*.test`~~*
+~~*- `*.dev`~~*
 
 ## 📁 Plugin Files
 
