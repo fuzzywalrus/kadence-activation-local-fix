@@ -1,15 +1,11 @@
 <?php
 /**
- * Test API connection for debugging  
- * ONLY APPLIES TO LOCALHOST DOMAINS FOR SECURITY
+ * Test API connection for debugging
+ * TESTS APPROVED DOMAINS ONLY FOR SECURITY
  */
 
-// Only apply these fixes if we're on localhost
-if (!is_localhost_environment()) {
-    return; // Exit early if not localhost
-}
-
-// Function is_localhost_environment() is defined in fix-http-api.php
+// Test API connection tools (removed localhost restriction)
+// Available for any host to test approved domain connectivity
 
 add_action('admin_notices', function() {
     if (isset($_GET['test_kadence_api']) && current_user_can('manage_options')) {
