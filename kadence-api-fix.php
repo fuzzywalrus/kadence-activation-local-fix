@@ -1,15 +1,11 @@
 <?php
 /**
- * Temporary fix for Kadence API connection issues in Docker
- * ONLY APPLIES TO LOCALHOST DOMAINS FOR SECURITY
+ * Kadence API connection fixes for plugin licensing
+ * APPLIES TO KADENCE DOMAINS ONLY FOR SECURITY
  */
 
-// Only apply these fixes if we're on localhost
-if (!is_localhost_environment()) {
-    return; // Exit early if not localhost
-}
-
-// Function is_localhost_environment() is defined in fix-http-api.php
+// Apply Kadence API fixes for any host (removed localhost restriction)
+// This targets only Kadence domains for security
 
 // Hook into WordPress init to ensure this runs early
 add_action('init', function() {
@@ -29,9 +25,5 @@ add_action('init', function() {
     }, 10, 3);
 });
 
-// Add debug logging for Kadence API calls
-add_action('wp_loaded', function() {
-    if (class_exists('Kadence_Plugin_API_Manager')) {
-        error_log('Kadence Plugin API Manager class found - HTTP fixes should be active');
-    }
-});
+// Debug logging removed to prevent log clutter
+// The Kadence API fixes are active automatically when needed
